@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-with open('README.rst') as file:
+with open('README.rst', 'r', 'UTF-8') as file:
     long_description = file.read()
 
 setup(
@@ -11,7 +11,7 @@ setup(
     author = 'GoCardless',
     author_email = 'engineering@gocardless.com',
     description = 'A client library for the GoCardless Pro API.',
-    long_description = long_description,
+    long_description = long_description.decode('utf8', ignore=True),
     license = 'MIT',
     keywords = 'gocardless directdebit payments sepa bacs',
     url = 'https://github.com/gocardless/gocardless-pro-python',
